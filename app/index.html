@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" type="text/css" href="main.css">
+     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+     <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+     <script>if (window.module) module = window.module;</script>
+     <script type="text/javascript" src="js/sound.js"></script>
+    <title>tranqil</title>
+  </head>
+  <body>
+    <div id="tranqil">
+      <div id="title">
+        <h2>relax..</h2>
+        <p>to the sounds of nature</p>
+      </div>
+      <div id="sounds">
+        <a onclick="play_forest()"><div class="image" id="for"><img src="img/forest.png"/><p id="forest">forest</p></div></a>
+        <a onclick="play_river()"><div class="image" id="riv"><img src="img/flood.png"/><p id="river">river</p></div></a>
+        <a onclick="play_night()"><div class="image" id="nigh"><img src="img/moon-phase-outline.png"/><p id="night">night</p></div></a>
+      </div>
+      <audio id="aforest" loop>
+          <source src="./audio/Waipoua Forest Wind.mp3" type="audio/mpeg" />
+          Your browser does not support HTML5 audio.
+      </audio>
+      <audio id="ariver" loop>
+          <source src="./audio/River Sounds.mp3" type="audio/mpeg" />
+          Your browser does not support HTML5 audio.
+      </audio>
+      <audio id="anight" loop>
+          <source src="./audio/Whiritoa Evening.mp3" type="audio/mpeg" />
+          Your browser does not support HTML5 audio.
+      </audio>
+   </div>
+  </body>
+</html>
