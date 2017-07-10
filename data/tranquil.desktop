@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Tranquil
+Comment=Soothing sounds
+GenericName=tranquil
+Exec=com.enso.agenda
+Icon=tranquil
+Terminal=false
+X-GNOME-Gettext-Domain=tranquil
+X-GNOME-UsesNotifications=true
+Categories=Music;Sounds;
