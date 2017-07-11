@@ -2,7 +2,7 @@
 
 Relax to the soothing sounds of nature 
 
-![tranquil](http://i.imgur.com/kCg0HTR.png)
+![Tranquil](http://i.imgur.com/mCdMSzv.png)
 
 Click on the images to play the sound, scroll on them to adjust the volume
 
@@ -18,7 +18,6 @@ Click on the images to play the sound, scroll on them to adjust the volume
 
 #### Build 
 
-	cd agenda-tasks
 	mkdir build
 	cd build
 	cmake .. -DCMAKE_INSTALL_PREFIX=/usr
