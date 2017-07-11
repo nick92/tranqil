@@ -80,8 +80,8 @@ ensure_vala_version("0.28.0" MINIMUM)
 include(ValaPrecompile)
 vala_precompile(VALA_C
         src/Tranquil.vala
+        src/TranBus.vala
         src/TranquilWindow.vala
-        src/Translations.vala
 PACKAGES
         gtk+-3.0
         granite
@@ -105,14 +105,15 @@ install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/night.svg DESTINATION shar
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/night-dark.svg DESTINATION share/icons/enso/tranquil)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/sea.svg DESTINATION share/icons/enso/tranquil)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/sea-dark.svg DESTINATION share/icons/enso/tranquil)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/tranquil.svg DESTINATION share/icons/hicolor/symbolic/apps)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/help.svg DESTINATION share/icons/enso/tranquil)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/info.svg DESTINATION share/icons/enso/tranquil)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/sounds/Waipoua-Forest-Wind.mp3 DESTINATION share/sounds/enso)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/sounds/Whiritoa-Evening.mp3 DESTINATION share/sounds/enso)
-
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/sounds/Mahurangi-Waves.mp3 DESTINATION share/sounds/enso)
 
 option (ICON_UPDATE "Run gtk-update-icon-cache after the install." ON)
 if (ICON_UPDATE)
   install (CODE "message(\"-- Updating icon cache...\")")
-  install (CODE "execute_process(COMMAND gtk-update-icon-cache -f -t ${CMAKE_INSTALL_PREFIX}/share/icons/enso)")
+  install (CODE "execute_process(COMMAND gtk-update-icon-cache -f -t ${CMAKE_INSTALL_PREFIX}/share/icons/)")
 endif (ICON_UPDATE)

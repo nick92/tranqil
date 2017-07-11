@@ -1,6 +1,6 @@
 /***
 
-    Copyright (C) 2014-2016 Tranquil Developers
+    Copyright (C) 2017 Tranquil Developers
 
     This program is free software: you can redistribute it and/or modify it
     under the terms of the GNU Lesser General Public License version 3, as
@@ -44,6 +44,7 @@ namespace Tranquil {
         private Gtk.Revealer                reveal_1;
         private Gtk.Revealer                reveal_2;
         private Granite.Widgets.AboutDialog aboutDialog;
+        private TranBus                     tranBus;
 
         private Gtk.SeparatorMenuItem   separator;
         private Gtk.MenuItem            item_clear_history;
@@ -60,10 +61,13 @@ namespace Tranquil {
         private Gtk.Button              img_help;
         private Gtk.Button              img_about;
         private Gst.Pipeline            pipeline;
-        private Gst.Element             pipeline_forest;
+        public Gst.Element              pipeline_forest;
         private Gst.Element             pipeline_night;
         private Gst.Element             pipeline_sea;
         private Gtk.SpinButton          spin_button;
+        Gst.Bus                         forest_bus;
+        Gst.Bus                         night_bus;
+        Gst.Bus                         sea_bus;
 
         public TranquilWindow () {
 
@@ -131,7 +135,7 @@ namespace Tranquil {
 
             setup_ui ();    // Set up the GUI
             player_init ();
-            listen_bus ();
+            tranBus = new TranBus (pipeline_forest, pipeline_night, pipeline_sea);
             connect_signals ();
         }
 
@@ -229,10 +233,6 @@ namespace Tranquil {
             grid.attach (list_box3, 2, 0, 1, 100);
             grid.attach (list_box4, 3, 0, 1, 100);
 
-            //if(first)
-              //Gtk.Timeout.add_seconds (1000, player_init);
-
-
             this.add (grid);
         }
 
@@ -243,7 +243,7 @@ namespace Tranquil {
             pipeline_forest.set("volume", 4.0);
             pipeline_night = Gst.parse_launch ("playbin uri=file:///home/nick/work/elementary/tranquil/data/sounds/Whiritoa-Evening.mp3");
             pipeline_night.set("volume", 4.0);
-            pipeline_sea = Gst.parse_launch ("playbin uri=file:///home/nick/work/elementary/tranquil/data/sounds/Whiritoa-Sea.mp3");
+            pipeline_sea = Gst.parse_launch ("playbin uri=file:///home/nick/work/elementary/tranquil/data/sounds/Mahurangi-Waves.mp3");
             pipeline_sea.set("volume", 4.0);
         	} catch (Error e) {
         		stderr.printf ("Error: %s\n", e.message);
@@ -251,6 +251,18 @@ namespace Tranquil {
         }
 
         public void connect_signals () {
+
+          forest_bus = pipeline_forest.get_bus ();
+          forest_bus.add_signal_watch ();
+          forest_bus.message.connect (tranBus.parse_message);
+
+          night_bus = pipeline_night.get_bus ();
+          night_bus.add_signal_watch ();
+          night_bus.message.connect (tranBus.parse_message);
+
+          sea_bus = pipeline_sea.get_bus ();
+          sea_bus.add_signal_watch ();
+          sea_bus.message.connect (tranBus.parse_message);
 
           volume1.value_changed.connect (() => {
             pipeline_forest.set("volume", volume1.get_value ());
@@ -296,10 +308,7 @@ namespace Tranquil {
           });
 
           img_about.clicked.connect (() => {
-            aboutDialog.help = "http://enso-os.site";
-            aboutDialog.bug = "http://enso-os.site";
-            aboutDialog.translate = "http://enso-os.site";
-            aboutDialog = new Granite.Widgets.AboutDialog ();
+            launch_about_dialoug ();
           });
 
           toggle_button_2.toggled.connect (() => {
@@ -316,13 +325,30 @@ namespace Tranquil {
           toggle_button_3.toggled.connect (() => {
             if(toggle_button_3.active){
               toggle_button_3.image = new Gtk.Image.from_file (Environment.get_home_dir () + "/work/elementary/tranquil/data/icons/sea.svg");
+              pipeline_sea.set_state (Gst.State.PLAYING);
             }
             else{
               toggle_button_3.image = new Gtk.Image.from_file (Environment.get_home_dir () + "/work/elementary/tranquil/data/icons/sea-dark.svg");
+              pipeline_sea.set_state (Gst.State.PAUSED);
             }
           });
         }
 
+        private void launch_about_dialoug () {
+
+          aboutDialog = new Granite.Widgets.AboutDialog ();
+          //aboutDialog.set_parent_window (TranquilWindow);
+          aboutDialog.help = "https://github.com/nick92/tranqil";
+          aboutDialog.bug = "https://github.com/nick92/tranqil/issues";
+          aboutDialog.translate = "https://github.com/nick92/tranqil/issues";
+          aboutDialog.program_name = "Tranquil";
+          aboutDialog.artists = {"fred", "buck"};
+          aboutDialog.authors = {"Nick Wilkins"};
+          aboutDialog.version = "0.1";
+          aboutDialog.website = "https://github.com/nick92/tranqil";
+          aboutDialog.website_label = "Github Page";
+
+        }
         private bool on_scroll_event (Gdk.EventScroll e) {
 
           //stderr.printf(e.direction.to_string ());

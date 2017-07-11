@@ -1,4 +1,4 @@
--- Dependencies -- 
+-- Dependencies  --
 
 valac 
 cmake 
@@ -8,8 +8,13 @@ libnotify-dev
 libgstreamer1.0-dev
 
 -- Build --
+
 mkdir build
 cd build
 cmake .. -DCMAKE_INSTALL_PREFIX=/usr
 make
 sudo make install
+
+-- Run --
+
+./tranquil

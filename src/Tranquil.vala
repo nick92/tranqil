@@ -25,6 +25,7 @@ public class Tranquil : Gtk.Application {
 
     private static Tranquil app;
     private TranquilWindow window = null;
+    private TranBus bus;
 
     public Tranquil () {
         Object (application_id: "com.enso.tranquil",
@@ -41,6 +42,8 @@ public class Tranquil : Gtk.Application {
         window.set_application (this);
         window.delete_event.connect(window.main_quit);
         window.show_all ();
+
+        //bus = new TranBus (window.pipeline_forest);
     }
 
     public static Tranquil get_instance () {
