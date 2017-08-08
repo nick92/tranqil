@@ -2,7 +2,7 @@
 
 Relax to the soothing sounds of nature 
 
-![Tranquil](http://i.imgur.com/6NPYy90.png)
+![Tranquil](http://i.imgur.com/1KFnILv.png)
 
 Click on the images to play the sound, scroll on them to adjust the volume
 
