@@ -14,6 +14,5 @@ Standards-Version: 3.9.6
 Package: com.github.nick92.tranqil
 Architecture: any
 Depends:  ${misc:Depends}, ${shlibs:Depends}
-Homepage: https://github.com/nick92/tranqil
 Description: Soothing sounds of nature 
 	Your life will be more relaxed with this simple app.
