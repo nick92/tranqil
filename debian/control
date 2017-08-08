@@ -3,11 +3,11 @@ Section: x11
 Priority: optional
 Maintainer: Nick Wilkins <nickawilkins@hotmail.com>
 Build-Depends: cmake(>= 2.8),
-	gtk+-3.0 (>=3.16),
-        granite (>=0.3.0),
-	gstreamer-1.0,
+	libgtk-3-0 (>=3.16),
+        libgranite3 (>=0.3.0),
+	libgstreamer1.0-0,
 	debhelper (>= 8.0.0),
-        glib-2.0 (>=2.39),
+        libglib-2.0-0 (>=2.39),
 	valac-0.26 | valac (>= 0.26)
 Standards-Version: 3.9.6
 
