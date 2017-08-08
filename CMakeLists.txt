@@ -7,7 +7,7 @@ list (APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/vala)
 # Base
 #
 set (DATADIR "${CMAKE_INSTALL_PREFIX}/share")
-set (PKGDATADIR "${DATADIR}/com.enso.tranquil")
+set (PKGDATADIR "${DATADIR}/enso/tranquil")
 set (GETTEXT_PACKAGE "com.enso.tranquil")
 set (RELEASE_NAME "Soothing sounds.")
 set (VERSION "0.1")
@@ -18,7 +18,7 @@ list (APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 #
 # Niceties
 #
-set (ARCHIVE_NAME agenda-${VERSION})
+set (ARCHIVE_NAME tranquil-${VERSION})
 add_custom_target (dist
     COMMAND bzr export --root=${ARCHIVE_NAME} ${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.tar.bz2
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
@@ -56,9 +56,7 @@ add_subdirectory(po)
 #
 add_subdirectory(schemas)
 
-#
-# Agenda
-#
+
 find_package(PkgConfig)
 
 pkg_check_modules(DEPS REQUIRED
@@ -94,23 +92,23 @@ OPTIONS
 )
 
 add_definitions(${CFLAGS} -Wall -Winit-self -Wwrite-strings -Wunreachable-code -Wstrict-prototypes)
-add_executable(tranquil ${VALA_C})
+add_executable(com.enso.tranquil ${VALA_C})
 
-install (TARGETS tranquil RUNTIME DESTINATION bin)
+install (TARGETS com.enso.tranquil RUNTIME DESTINATION bin)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/tranquil.desktop DESTINATION share/applications)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.enso.tranquil.appdata.xml DESTINATION share/appdata)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/forest.svg DESTINATION share/icons/enso/tranquil)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/forest-dark.svg DESTINATION share/icons/enso/tranquil)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/night.svg DESTINATION share/icons/enso/tranquil)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/night-dark.svg DESTINATION share/icons/enso/tranquil)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/sea.svg DESTINATION share/icons/enso/tranquil)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/sea-dark.svg DESTINATION share/icons/enso/tranquil)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/forest.svg DESTINATION ${PKGDATADIR}/icons)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/forest-dark.svg DESTINATION ${PKGDATADIR}/icons)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/night.svg DESTINATION ${PKGDATADIR}/icons)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/night-dark.svg DESTINATION ${PKGDATADIR}/icons)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/sea.svg DESTINATION ${PKGDATADIR}/icons)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/sea-dark.svg DESTINATION ${PKGDATADIR}/icons)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/tranquil.svg DESTINATION share/icons/hicolor/symbolic/apps)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/help.svg DESTINATION share/icons/enso/tranquil)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/info.svg DESTINATION share/icons/enso/tranquil)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/sounds/Waipoua-Forest-Wind.mp3 DESTINATION share/sounds/enso)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/sounds/Whiritoa-Evening.mp3 DESTINATION share/sounds/enso)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/sounds/Mahurangi-Waves.mp3 DESTINATION share/sounds/enso)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/help.svg DESTINATION ${PKGDATADIR}/icons)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/info.svg DESTINATION ${PKGDATADIR}/icons)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/sounds/Waipoua-Forest-Wind.mp3 DESTINATION ${PKGDATADIR}/sounds)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/sounds/Whiritoa-Evening.mp3 DESTINATION ${PKGDATADIR}/sounds)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/sounds/Mahurangi-Waves.mp3 DESTINATION ${PKGDATADIR}/sounds)
 
 option (ICON_UPDATE "Run gtk-update-icon-cache after the install." ON)
 if (ICON_UPDATE)

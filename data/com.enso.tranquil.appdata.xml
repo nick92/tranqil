@@ -1,30 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2017 Dane Henson <thegreatdane@gmail.com>-->
+<!-- Copyright 2017 Nick Wilkins <nickawilkins@hotmail.com>-->
 <component type="desktop">
-  <id>com.github.dahenson.agenda.desktop</id>
+  <id>com.enso.tranquil.desktop</id>
   <metadata_license>CC0</metadata_license>
-  <name>Agenda</name>
-  <summary>Get things done</summary>
-  <developer_name>Dane Henson</developer_name>
-  <url type="homepage">http://brainofdane.com</url>
-  <url type="bugtracker">https://github.com/dahenson/agenda/issues</url>
+  <name>Tranquil</name>
+  <summary>Relax to soothing sounds of nature</summary>
+  <developer_name>Nick Wilkins</developer_name>
+  <url type="homepage">https://github.com/nick92/tranqil</url>
+  <url type="bugtracker">https://github.com/nick92/tranqil/issues/</url>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/dahenson/agenda/master/data/screenshot.png</image>
+      <image>http://i.imgur.com/6NPYy90.png</image>
     </screenshot>
   </screenshots>
   <description>
     <p>
-      Agenda is a simple, slick, speedy and no-nonsense task manager. Use it to keep track of the tasks that matter most.
+      Relieve stress or help concentration with soothing sounds of nature  
     </p>
     <ul>
-      <li>Blazingly fast and light</li>
-      <li>Remembers your list until you clear completed tasks</li>
-      <li>Autocompletion for previously added tasks</li>
-      <li>Quit with the Esc key</li>
+      <li>3 Soothing nature sounds to choose from</li>
+      <li>Helps with relaxing or drowning out destracting background noises</li>
+      <li>Easy to use, click and play</li>
     </ul>
     <p>
-      I dare you to find an easier, faster, more beautiful task manager for elementary OS.
+      Your life will be more relaxed with this simple app.
     </p>
   </description>
+<custom>
+     <value key="x-appcenter-color-primary">#603461</value>
+     <value key="x-appcenter-color-primary-text">rgb(255, 255, 255)</value>
+     <value key="x-appcenter-suggested-price">5</value>
+  </custom>
 </component>

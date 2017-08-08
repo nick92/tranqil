@@ -120,7 +120,7 @@ namespace Tranquil {
             /**
              *  Initialize the GUI components
              */
-            tranquil_welcome = new Granite.Widgets.Welcome ("Relax..", "Sounds of nature");
+            tranquil_welcome = new Granite.Widgets.Welcome ("Relax..", "To Nature");
             tranquil_text = new Granite.Widgets.Welcome ("", "Select an image to play the sound");
             tranquil_text2 = new Granite.Widgets.Welcome ("", "Scroll on image to adjust volume");
 
@@ -149,13 +149,13 @@ namespace Tranquil {
             toggle_button_2 = new Gtk.ToggleButton ();
             toggle_button_3 = new Gtk.ToggleButton ();
 
-            toggle_button_1.image = new Gtk.Image.from_file (Environment.get_home_dir () + "/work/elementary/tranquil/data/icons/forest-dark.svg");
-            toggle_button_2.image = new Gtk.Image.from_file (Environment.get_home_dir () + "/work/elementary/tranquil/data/icons/night-dark.svg");
-            toggle_button_3.image = new Gtk.Image.from_file (Environment.get_home_dir () + "/work/elementary/tranquil/data/icons/sea-dark.svg");
+            toggle_button_1.image = new Gtk.Image.from_file (Build.PKGDATADIR + "/icons/forest-dark.svg");
+            toggle_button_2.image = new Gtk.Image.from_file (Build.PKGDATADIR + "/icons/night-dark.svg");
+            toggle_button_3.image = new Gtk.Image.from_file (Build.PKGDATADIR + "/icons/sea-dark.svg");
 
-            toggle_button_1.opacity = 0.6;
-            toggle_button_2.opacity = 0.6;
-            toggle_button_3.opacity = 0.6;
+            toggle_button_1.opacity = 0.9;
+            toggle_button_2.opacity = 0.9;
+            toggle_button_3.opacity = 0.9;
 
             toggle_button_1.add_events (Gdk.EventMask.SCROLL_MASK);
             toggle_button_2.add_events (Gdk.EventMask.SCROLL_MASK);
@@ -172,26 +172,26 @@ namespace Tranquil {
             list_box4.selection_mode = Gtk.SelectionMode.NONE;
 
             img_help = new Gtk.Button ();
-            img_about = new Gtk.Button ();
+            //img_about = new Gtk.Button ();
 
-            img_help.image = new Gtk.Image.from_file (Environment.get_home_dir () + "/work/elementary/tranquil/data/icons/help.svg");
-            img_about.image = new Gtk.Image.from_file (Environment.get_home_dir () + "/work/elementary/tranquil/data/icons/info.svg");
-            img_about.tooltip_text = "Display About";
+            img_help.image = new Gtk.Image.from_file (Build.PKGDATADIR + "/icons/help.svg");
+            //img_about.image = new Gtk.Image.from_file (Build.PKGDATADIR + "/icons/info.svg");
+            //img_about.tooltip_text = "Display About";
             img_help.tooltip_text = "Display Help";
 
             volume1 = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 8, 1);
             volume1.set_draw_value (false);
-            volume1.set_value (4);
+            volume1.set_value (7);
             volume1.round_digits = 0;
 
             volume2 = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 8, 1);
             volume2.set_draw_value (false);
-            volume2.set_value (4);
+            volume2.set_value (7);
             volume2.round_digits = 0;
 
             volume3 = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 8, 1);
             volume3.set_draw_value (false);
-            volume3.set_value (4);
+            volume3.set_value (7);
             volume3.round_digits = 0;
 
             tranquil_welcome.expand = true;
@@ -221,8 +221,8 @@ namespace Tranquil {
             list_box3.expand = true;
             list_box3.valign = Gtk.Align.FILL;
 
-            list_box4.insert (img_about, 0);
-            list_box4.insert (img_help, 1);
+            //list_box4.insert (img_about, 0);
+            list_box4.insert (img_help, 0);
             list_box4.valign = Gtk.Align.FILL;
 
             grid.expand = true;   // expand the box to fill the whole window
@@ -239,12 +239,12 @@ namespace Tranquil {
         public void player_init () {
           // Build the pipeline:
         	try {
-        		pipeline_forest = Gst.parse_launch ("playbin uri=file:///home/nick/work/elementary/tranquil/data/sounds/Waipoua-Forest-Wind.mp3");
-            pipeline_forest.set("volume", 4.0);
-            pipeline_night = Gst.parse_launch ("playbin uri=file:///home/nick/work/elementary/tranquil/data/sounds/Whiritoa-Evening.mp3");
-            pipeline_night.set("volume", 4.0);
-            pipeline_sea = Gst.parse_launch ("playbin uri=file:///home/nick/work/elementary/tranquil/data/sounds/Mahurangi-Waves.mp3");
-            pipeline_sea.set("volume", 4.0);
+        		pipeline_forest = Gst.parse_launch ("playbin uri=file://" + Build.PKGDATADIR + "/sounds/Waipoua-Forest-Wind.mp3");
+            pipeline_forest.set("volume", 7.0);
+            pipeline_night = Gst.parse_launch ("playbin uri=file://" + Build.PKGDATADIR + "/sounds/Whiritoa-Evening.mp3");
+            pipeline_night.set("volume", 7.0);
+            pipeline_sea = Gst.parse_launch ("playbin uri=file://" + Build.PKGDATADIR + "/sounds/Mahurangi-Waves.mp3");
+            pipeline_sea.set("volume", 7.0);
         	} catch (Error e) {
         		stderr.printf ("Error: %s\n", e.message);
         	}
@@ -285,11 +285,11 @@ namespace Tranquil {
 
           toggle_button_1.toggled.connect (() => {
             if(toggle_button_1.active){
-              toggle_button_1.image = new Gtk.Image.from_file (Environment.get_home_dir () + "/work/elementary/tranquil/data/icons/forest.svg");
+              toggle_button_1.image = new Gtk.Image.from_file (Build.PKGDATADIR + "/icons/forest.svg");
               pipeline_forest.set_state (Gst.State.PLAYING);
             }
             else {
-              toggle_button_1.image = new Gtk.Image.from_file (Environment.get_home_dir () + "/work/elementary/tranquil/data/icons/forest-dark.svg");
+              toggle_button_1.image = new Gtk.Image.from_file (Build.PKGDATADIR + "/icons/forest-dark.svg");
               pipeline_forest.set_state (Gst.State.PAUSED);
             }
           });
@@ -307,28 +307,28 @@ namespace Tranquil {
             }
           });
 
-          img_about.clicked.connect (() => {
+          /*img_about.clicked.connect (() => {
             launch_about_dialoug ();
-          });
+          });*/
 
           toggle_button_2.toggled.connect (() => {
             if(toggle_button_2.active){
-              toggle_button_2.image = new Gtk.Image.from_file (Environment.get_home_dir () + "/work/elementary/tranquil/data/icons/night.svg");
+              toggle_button_2.image = new Gtk.Image.from_file (Build.PKGDATADIR + "/icons/night.svg");
               pipeline_night.set_state (Gst.State.PLAYING);
             }
             else{
-              toggle_button_2.image = new Gtk.Image.from_file (Environment.get_home_dir () + "/work/elementary/tranquil/data/icons/night-dark.svg");
+              toggle_button_2.image = new Gtk.Image.from_file (Build.PKGDATADIR + "/icons/night-dark.svg");
               pipeline_night.set_state (Gst.State.PAUSED);
             }
           });
 
           toggle_button_3.toggled.connect (() => {
             if(toggle_button_3.active){
-              toggle_button_3.image = new Gtk.Image.from_file (Environment.get_home_dir () + "/work/elementary/tranquil/data/icons/sea.svg");
+              toggle_button_3.image = new Gtk.Image.from_file (Build.PKGDATADIR + "/icons/sea.svg");
               pipeline_sea.set_state (Gst.State.PLAYING);
             }
             else{
-              toggle_button_3.image = new Gtk.Image.from_file (Environment.get_home_dir () + "/work/elementary/tranquil/data/icons/sea-dark.svg");
+              toggle_button_3.image = new Gtk.Image.from_file (Build.PKGDATADIR + "/icons/sea-dark.svg");
               pipeline_sea.set_state (Gst.State.PAUSED);
             }
           });
