@@ -174,7 +174,7 @@ namespace Tranquil {
             img_help = new Gtk.Button ();
             //img_about = new Gtk.Button ();
 
-            img_help.image = new Gtk.Image.from_file (Build.PKGDATADIR + "/icons/help.svg");
+            img_help.image = new Gtk.Image.from_pixbuf (new Gdk.Pixbuf.from_file_at_size (Build.PKGDATADIR + "/icons/help.svg", 10, 10));
             //img_about.image = new Gtk.Image.from_file (Build.PKGDATADIR + "/icons/info.svg");
             //img_about.tooltip_text = "Display About";
             img_help.tooltip_text = "Display Help";

@@ -27,8 +27,8 @@
     </p>
   </description>
 <custom>
-     <value key="x-appcenter-color-primary">#603461</value>
+     <value key="x-appcenter-color-primary">#B26483</value>
      <value key="x-appcenter-color-primary-text">rgb(255, 255, 255)</value>
-     <value key="x-appcenter-suggested-price">5</value>
+     <value key="x-appcenter-suggested-price">1</value>
   </custom>
 </component>
