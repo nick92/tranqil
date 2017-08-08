@@ -78,6 +78,12 @@ namespace Tranquil {
                     border: none;
                 }
 
+                GtkButton {
+                  background-color: transparent;
+                  border: none;
+                  box-shadow: none;
+                }
+
                 GtkToggleButton {
                   background-color: transparent;
                   border: none;
@@ -109,7 +115,7 @@ namespace Tranquil {
             geo.min_width = MIN_WIDTH;
             geo.min_height = MIN_HEIGHT;
             geo.max_width = 1024;
-            geo.max_height = 2048;
+            geo.max_height = 648;
 
             this.set_geometry_hints(null, geo, Gdk.WindowHints.MIN_SIZE | Gdk.WindowHints.MAX_SIZE);
 
@@ -174,7 +180,7 @@ namespace Tranquil {
             img_help = new Gtk.Button ();
             //img_about = new Gtk.Button ();
 
-            img_help.image = new Gtk.Image.from_pixbuf (new Gdk.Pixbuf.from_file_at_size (Build.PKGDATADIR + "/icons/help.svg", 10, 10));
+            img_help.image = new Gtk.Image.from_pixbuf (new Gdk.Pixbuf.from_file_at_size (Build.PKGDATADIR + "/icons/help.svg", 30, 30));
             //img_about.image = new Gtk.Image.from_file (Build.PKGDATADIR + "/icons/info.svg");
             //img_about.tooltip_text = "Display About";
             img_help.tooltip_text = "Display Help";
