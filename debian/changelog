@@ -1,4 +1,25 @@
-com.enso.tranquil (1.0) xenial; urgency=medium
+com.github.nick92.tranqil (1.0.3) xenial; urgency=medium
+
+  * change to debain package files to solve build failures
+
+ -- nick <nick@unknown>  Tue, 08 Aug 2017 10:38:54 +0100
+
+
+com.github.nick92.tranqil (1.0.2) xenial; urgency=medium
+
+  * Initial Release.
+
+ -- nick <nick@unknown>  Tue, 08 Aug 2017 10:38:54 +0100
+
+
+com.github.nick92.tranqil (1.0.1) xenial; urgency=medium
+
+  * Initial Release.
+
+ -- nick <nick@unknown>  Tue, 08 Aug 2017 10:38:54 +0100
+
+
+com.github.nick92.tranqil (1.0.0) xenial; urgency=medium
 
   * Initial Release.
 
