@@ -62,7 +62,7 @@ find_package(PkgConfig)
 pkg_check_modules(DEPS REQUIRED
         gtk+-3.0>=3.16
         granite>=0.3.0
-	gstreamer-1.0
+	gstreamer1.0
         glib-2.0>=2.39)
 
 add_definitions(${DEPS_CFLAGS})
@@ -84,7 +84,7 @@ PACKAGES
         gtk+-3.0
         granite
         glib-2.0
-	gstreamer-1.0
+	gstreamer1.0
 CUSTOM_VAPIS
         vapi/config.vapi
 OPTIONS
