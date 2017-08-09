@@ -96,7 +96,7 @@ add_executable(com.enso.tranquil ${VALA_C})
 
 install (TARGETS com.enso.tranquil RUNTIME DESTINATION bin)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/tranquil.desktop DESTINATION share/applications)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.enso.tranquil.appdata.xml DESTINATION share/appdata)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.nick92.tranqil.appdata.xml DESTINATION share/metainfo)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/forest.svg DESTINATION ${PKGDATADIR}/icons)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/forest-dark.svg DESTINATION ${PKGDATADIR}/icons)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/night.svg DESTINATION ${PKGDATADIR}/icons)
