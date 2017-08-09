@@ -4,9 +4,8 @@ Priority: optional
 Maintainer: Nick Wilkins <nickawilkins@hotmail.com>
 Build-Depends: cmake(>= 2.8),
 	libgtk-3-0 (>=3.16),
-        libgranite3 (>=0.3.0),
-	libgstreamer1.0-0 (>=1.8.3),
-	gir1.2-gstreamer-1.0,
+        libgranite-dev (>=0.3.0),
+	libgstreamer1.0-dev (>=1.8.3),
 	debhelper (>= 8.0.0),
         libglib2.0-0 (>=2.39),
 	valac-0.26 | valac (>= 0.26)
