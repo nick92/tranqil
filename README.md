@@ -28,7 +28,9 @@ Click on the images to play the sound, scroll on them to adjust the volume
 
 ### Sounds
 
-Sounds provided by [Naturesounds New Zealand](http://naturesounds.co.nz)
+[Forst](https://freesound.org/people/bajko/sounds/385279/) by [bajko](https://freesound.org/people/bajko) - Creative Commons
+[Night](https://freesound.org/people/Laplume/sounds/345655/) by [Lamlume](https://freesound.org/people/Laplume) - Creative Commons
+[Ocean](https://freesound.org/people/juskiddink/sounds/144164/) by [justkiddink](https://freesound.org/people/juskiddink) Creative Commons BY 3.0
 
 ### Icons
 
