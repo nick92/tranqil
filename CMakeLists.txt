@@ -110,9 +110,9 @@ install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/128/tranquil.svg DESTINATI
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/tranquil.svg DESTINATION share/icons/hicolor/512x512/apps)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/help.svg DESTINATION ${PKGDATADIR}/icons)
 #install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/info.svg DESTINATION ${PKGDATADIR}/icons)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/sounds/waves-at-baltic-sea-shore.wav DESTINATION ${PKGDATADIR}/sounds)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/sounds/ambience-night-wildlife.wav DESTINATION ${PKGDATADIR}/sounds)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/sounds/forest-at-dawn-birds.wav DESTINATION ${PKGDATADIR}/sounds)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/sounds/amb-forest-spring-afternoon-02.wav DESTINATION ${PKGDATADIR}/sounds)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/sounds/countryside-summer-evening.wav DESTINATION ${PKGDATADIR}/sounds)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/sounds/waves-and-birdsong.wav DESTINATION ${PKGDATADIR}/sounds)
 
 option (ICON_UPDATE "Run gtk-update-icon-cache after the install." ON)
 if (ICON_UPDATE)
