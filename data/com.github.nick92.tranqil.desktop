@@ -1,10 +1,10 @@
 [Desktop Entry]
 Type=Application
-Name=Tranquil
+Name=Tranqil
 Comment=Soothing sounds
-GenericName=tranquil
-Exec=com.enso.tranquil
+GenericName=Tranquil
+Exec=com.github.nick92.tranqil
 Icon=tranquil
 Terminal=false
-X-GNOME-Gettext-Domain=tranquil
+X-GNOME-Gettext-Domain=tranqil
 Categories=GNOME;GTK;AudioVideo;Player;Audio;

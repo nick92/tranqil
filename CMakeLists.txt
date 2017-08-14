@@ -1,4 +1,4 @@
-project (com.enso.tranquil)
+project (com.github.nick92.tranqil)
 cmake_minimum_required (VERSION 2.8)
 
 list (APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/vala)
@@ -8,7 +8,7 @@ list (APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/vala)
 #
 set (DATADIR "${CMAKE_INSTALL_PREFIX}/share")
 set (PKGDATADIR "${DATADIR}/enso/tranquil")
-set (GETTEXT_PACKAGE "com.enso.tranquil")
+set (GETTEXT_PACKAGE "com.github.nick92.tranqil")
 set (RELEASE_NAME "Soothing sounds.")
 set (VERSION "0.1")
 set (VERSION_INFO "Production")
@@ -92,10 +92,10 @@ OPTIONS
 )
 
 add_definitions(${CFLAGS} -Wall -Winit-self -Wwrite-strings -Wunreachable-code -Wstrict-prototypes)
-add_executable(com.enso.tranquil ${VALA_C})
+add_executable(com.github.nick92.tranqil ${VALA_C})
 
-install (TARGETS com.enso.tranquil RUNTIME DESTINATION bin)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/tranquil.desktop DESTINATION share/applications)
+install (TARGETS com.github.nick92.tranqil RUNTIME DESTINATION bin)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.nick92.tranqil.desktop DESTINATION share/applications)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.nick92.tranqil.appdata.xml DESTINATION share/metainfo)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/forest.svg DESTINATION ${PKGDATADIR}/icons)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/forest-dark.svg DESTINATION ${PKGDATADIR}/icons)
