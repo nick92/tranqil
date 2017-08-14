@@ -245,12 +245,12 @@ namespace Tranquil {
         public void player_init () {
           // Build the pipeline:
         	try {
-        		pipeline_forest = Gst.parse_launch ("playbin uri=file://" + Build.PKGDATADIR + "/sounds/Waipoua-Forest-Wind.mp3");
-            pipeline_forest.set("volume", 7.0);
-            pipeline_night = Gst.parse_launch ("playbin uri=file://" + Build.PKGDATADIR + "/sounds/Whiritoa-Evening.mp3");
-            pipeline_night.set("volume", 7.0);
-            pipeline_sea = Gst.parse_launch ("playbin uri=file://" + Build.PKGDATADIR + "/sounds/Mahurangi-Waves.mp3");
-            pipeline_sea.set("volume", 7.0);
+        		pipeline_forest = Gst.parse_launch ("playbin uri=file://" + Build.PKGDATADIR + "/sounds/amb-forest-spring-afternoon-02.wav");
+            pipeline_forest.set("volume", 5.0);
+            pipeline_night = Gst.parse_launch ("playbin uri=file://" + Build.PKGDATADIR + "/sounds/countryside-summer-evening.wav");
+            pipeline_night.set("volume", 5.0);
+            pipeline_sea = Gst.parse_launch ("playbin uri=file://" + Build.PKGDATADIR + "/sounds/waves-and-birdsong.wav");
+            pipeline_sea.set("volume", 5.0);
         	} catch (Error e) {
         		stderr.printf ("Error: %s\n", e.message);
         	}
