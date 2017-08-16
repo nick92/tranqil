@@ -36,9 +36,8 @@ namespace Tranquil {
         }
 
         /* GUI components */
-        private Granite.Widgets.Welcome     tranquil_welcome;  // The Welcome screen when there are no tasks
-        private Granite.Widgets.Welcome     tranquil_text;
-        private Granite.Widgets.Welcome     tranquil_text2;
+        private Gtk.Label                   tranquil_text;
+        private Gtk.Label                   tranquil_text2;
         private Gtk.Grid                    grid;            // Container for everything
         private Gtk.Revealer                reveal;
         private Gtk.Revealer                reveal_1;
@@ -48,10 +47,6 @@ namespace Tranquil {
 
         private Gtk.SeparatorMenuItem   separator;
         private Gtk.MenuItem            item_clear_history;
-        private Gtk.ListBox             list_box1;
-        private Gtk.ListBox             list_box2;
-        private Gtk.ListBox             list_box3;
-        private Gtk.ListBox             list_box4;
         private Gtk.ToggleButton        toggle_button_1;
         private Gtk.ToggleButton        toggle_button_2;
         private Gtk.ToggleButton        toggle_button_3;
@@ -78,28 +73,8 @@ namespace Tranquil {
                     border: none;
                 }
 
-                GtkButton {
-                  background-color: transparent;
-                  border: none;
-                  box-shadow: none;
-                }
-
                 GtkToggleButton {
-                  background-color: transparent;
-                  border: none;
-                  box-shadow: none;
-                }
-                GtkToggleButton:checked {
-                  background-color: transparent;
-                  border: none;
-                  box-shadow: none;
-                  color: #000;
-                }
-                GtkToggleButton:selected {
-                  background-color: transparent;
-                  border: none;
-                  box-shadow: none;
-                  color: #000;
+                  border-radius: 50%;
                 }
             """;
 
@@ -126,15 +101,17 @@ namespace Tranquil {
             /**
              *  Initialize the GUI components
              */
-            tranquil_welcome = new Granite.Widgets.Welcome ("Relax..", "To Nature");
-            tranquil_text = new Granite.Widgets.Welcome ("", "Select an image to play the sound");
-            tranquil_text2 = new Granite.Widgets.Welcome ("", "Scroll on image to adjust volume");
+            tranquil_text = new Gtk.Label ("Select an image to play the sound");
+            tranquil_text.justify = Gtk.Justification.CENTER;
+            tranquil_text.wrap = true;
+            tranquil_text.get_style_context ().add_class ("h2");
+
+            tranquil_text2 = new Gtk.Label ("Scroll on image to adjust volume");
+            tranquil_text2.justify = Gtk.Justification.CENTER;
+            tranquil_text2.wrap = true;
+            tranquil_text2.get_style_context ().add_class ("h2");
 
             grid = new Gtk.Grid ();
-            list_box1 = new Gtk.ListBox ();
-            list_box2 = new Gtk.ListBox ();
-            list_box3 = new Gtk.ListBox ();
-            list_box4 = new Gtk.ListBox ();
             reveal = new Gtk.Revealer ();
             reveal_1 = new Gtk.Revealer ();
             reveal_2 = new Gtk.Revealer ();
@@ -150,6 +127,13 @@ namespace Tranquil {
          */
         private void setup_ui () {
             this.set_title ("Tranquil");
+
+            var relax_label = new Gtk.Label ("Relax..");
+            relax_label.get_style_context ().add_class ("h1");
+
+            var nature_label = new Gtk.Label ("To Nature");
+            nature_label.get_style_context ().add_class ("h2");
+            nature_label.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
             toggle_button_1 = new Gtk.ToggleButton ();
             toggle_button_2 = new Gtk.ToggleButton ();
@@ -167,20 +151,21 @@ namespace Tranquil {
             toggle_button_2.add_events (Gdk.EventMask.SCROLL_MASK);
             toggle_button_3.add_events (Gdk.EventMask.SCROLL_MASK);
 
-            list_box1.valign = Gtk.Align.FILL;
-            list_box2.valign = Gtk.Align.FILL;
-            list_box3.valign = Gtk.Align.FILL;
-            list_box4.valign = Gtk.Align.FILL;
+            toggle_button_2.margin_top = 24;
 
-            list_box1.selection_mode = Gtk.SelectionMode.NONE;
-            list_box2.selection_mode = Gtk.SelectionMode.NONE;
-            list_box3.selection_mode = Gtk.SelectionMode.NONE;
-            list_box4.selection_mode = Gtk.SelectionMode.NONE;
+            toggle_button_1.valign = Gtk.Align.START;
+            toggle_button_3.valign = Gtk.Align.START;
+
+            toggle_button_1.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+            toggle_button_2.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+            toggle_button_3.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
 
             img_help = new Gtk.Button ();
             //img_about = new Gtk.Button ();
 
-            img_help.image = new Gtk.Image.from_pixbuf (new Gdk.Pixbuf.from_file_at_size (Build.PKGDATADIR + "/icons/help.svg", 30, 30));
+            img_help.image = new Gtk.Image.from_icon_name ("help-contents-symbolic", Gtk.IconSize.DND);
+            img_help.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+            img_help.valign = Gtk.Align.START;
             //img_about.image = new Gtk.Image.from_file (Build.PKGDATADIR + "/icons/info.svg");
             //img_about.tooltip_text = "Display About";
             img_help.tooltip_text = "Display Help";
@@ -200,44 +185,25 @@ namespace Tranquil {
             volume3.set_value (7);
             volume3.round_digits = 0;
 
-            tranquil_welcome.expand = true;
-            tranquil_text.expand = true;
-            tranquil_text2.expand = true;
-
             reveal.set_transition_duration (800);
             reveal_1.set_transition_duration (800);
             reveal_2.set_transition_duration (800);
 
-            //reveal.add(tranquil_welcome);
+            reveal_1.valign = Gtk.Align.START;
+            reveal_2.valign = Gtk.Align.START;
+
             reveal_1.add(tranquil_text);
             reveal_2.add(tranquil_text2);
 
-            list_box1.insert (reveal_1, 1);
-            list_box1.insert (toggle_button_1, 0);
-            list_box1.expand = true;
-            list_box1.valign = Gtk.Align.FILL;
-
-            list_box2.insert (tranquil_welcome, 0);
-            list_box2.insert (toggle_button_2, 1);
-            list_box2.expand = true;
-            list_box2.valign = Gtk.Align.FILL;
-
-            list_box3.insert (reveal_2, 1);
-            list_box3.insert (toggle_button_3, 0);
-            list_box3.expand = true;
-            list_box3.valign = Gtk.Align.FILL;
-
-            //list_box4.insert (img_about, 0);
-            list_box4.insert (img_help, 0);
-            list_box4.valign = Gtk.Align.FILL;
-
-            grid.expand = true;   // expand the box to fill the whole window
-            grid.row_homogeneous = true;
-            //grid.attach (tranquil_welcome, 0, 0, 100, 100);
-            grid.attach (list_box1, 0, 0, 1, 100);
-            grid.attach (list_box2, 1, 0, 1, 100);
-            grid.attach (list_box3, 2, 0, 1, 100);
-            grid.attach (list_box4, 3, 0, 1, 100);
+            grid.margin = 12;
+            grid.attach (toggle_button_1, 0, 0, 1, 3);
+            grid.attach (reveal_1, 0, 3, 1, 1);
+            grid.attach (relax_label, 1, 0, 1, 1);
+            grid.attach (nature_label, 1, 1, 1, 1);
+            grid.attach (toggle_button_2, 1, 2, 1, 1);
+            grid.attach (toggle_button_3, 2, 0, 1, 3);
+            grid.attach (reveal_2, 2, 3, 1, 1);
+            grid.attach (img_help, 3, 0, 1, 1);
 
             this.add (grid);
         }
@@ -438,20 +404,6 @@ namespace Tranquil {
             this.destroy ();
 
             return false;
-        }
-
-        /**
-         *  Hides the scrolled_window (task list) and shows the Welcome screen.
-         */
-        void show_welcome () {
-            tranquil_welcome.show ();
-        }
-
-        /**
-         *  Hides the Welcome screen and shows the scrolled_window (task list).
-         */
-        void hide_welcome () {
-            tranquil_welcome.hide ();
         }
     }
 }
