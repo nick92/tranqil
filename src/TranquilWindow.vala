@@ -153,6 +153,9 @@ namespace Tranquil {
 
             toggle_button_2.margin_top = 24;
 
+            toggle_button_1.halign = Gtk.Align.END;
+            toggle_button_3.halign = Gtk.Align.START;
+
             toggle_button_1.valign = Gtk.Align.START;
             toggle_button_3.valign = Gtk.Align.START;
 
@@ -195,6 +198,8 @@ namespace Tranquil {
             reveal_1.add(tranquil_text);
             reveal_2.add(tranquil_text2);
 
+            grid.halign = Gtk.Align.CENTER;
+            grid.valign = Gtk.Align.CENTER;
             grid.margin = 12;
             grid.attach (toggle_button_1, 0, 0, 1, 3);
             grid.attach (reveal_1, 0, 3, 1, 1);
