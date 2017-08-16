@@ -108,7 +108,6 @@ install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/48/tranquil.svg DESTINATIO
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/64/tranquil.svg DESTINATION share/icons/hicolor/64x64/apps)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/128/tranquil.svg DESTINATION share/icons/hicolor/128x128/apps)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/tranquil.svg DESTINATION share/icons/hicolor/512x512/apps)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/help.svg DESTINATION ${PKGDATADIR}/icons)
 #install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/info.svg DESTINATION ${PKGDATADIR}/icons)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/sounds/amb-forest-spring-afternoon-02.wav DESTINATION ${PKGDATADIR}/sounds)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/sounds/countryside-summer-evening.wav DESTINATION ${PKGDATADIR}/sounds)
