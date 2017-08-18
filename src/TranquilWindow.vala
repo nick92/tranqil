@@ -53,7 +53,7 @@ namespace Tranquil {
         private Gtk.Scale               volume1;
         private Gtk.Scale               volume2;
         private Gtk.Scale               volume3;
-        private Gtk.Button              img_help;
+        private Gtk.Button              button_help;
         private Gtk.Button              img_about;
         private Gst.Pipeline            pipeline;
         public Gst.Element              pipeline_forest;
@@ -163,15 +163,20 @@ namespace Tranquil {
             toggle_button_2.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
             toggle_button_3.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
 
-            img_help = new Gtk.Button ();
+            button_help = new Gtk.Button ();
             //img_about = new Gtk.Button ();
 
-            img_help.image = new Gtk.Image.from_icon_name ("help-contents-symbolic", Gtk.IconSize.DND);
-            img_help.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-            img_help.valign = Gtk.Align.START;
+            button_help.image = new Gtk.Image.from_icon_name ("help-contents-symbolic", Gtk.IconSize.DND);
+            button_help.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+            button_help.valign = Gtk.Align.START;
             //img_about.image = new Gtk.Image.from_file (Build.PKGDATADIR + "/icons/info.svg");
             //img_about.tooltip_text = "Display About";
-            img_help.tooltip_text = "Display Help";
+            button_help.tooltip_text = "Display Help";
+
+            var header = new Gtk.HeaderBar ();
+            header.show_close_button = true;
+            header.get_style_context ().add_class ("default-decoration");
+            header.pack_end (button_help);
 
             volume1 = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 8, 1);
             volume1.set_draw_value (false);
@@ -208,7 +213,7 @@ namespace Tranquil {
             grid.attach (toggle_button_2, 1, 2, 1, 1);
             grid.attach (toggle_button_3, 2, 0, 1, 3);
             grid.attach (reveal_2, 2, 3, 1, 1);
-            grid.attach (img_help, 3, 0, 1, 1);
+            grid.attach (button_help, 3, 0, 1, 1);
 
             this.add (grid);
         }
@@ -216,11 +221,11 @@ namespace Tranquil {
         public void player_init () {
           // Build the pipeline:
         	try {
-        		pipeline_forest = Gst.parse_launch ("playbin uri=file://" + Build.PKGDATADIR + "/sounds/amb-forest-spring-afternoon-02.wav");
+        		pipeline_forest = Gst.parse_launch ("playbin uri=file://" + Build.PKGDATADIR + "/sounds/amb-forest-spring-afternoon-02.ogg");
             pipeline_forest.set("volume", 5.0);
-            pipeline_night = Gst.parse_launch ("playbin uri=file://" + Build.PKGDATADIR + "/sounds/countryside-summer-evening.wav");
+            pipeline_night = Gst.parse_launch ("playbin uri=file://" + Build.PKGDATADIR + "/sounds/countryside-summer-evening.ogg");
             pipeline_night.set("volume", 5.0);
-            pipeline_sea = Gst.parse_launch ("playbin uri=file://" + Build.PKGDATADIR + "/sounds/waves-and-birdsong.wav");
+            pipeline_sea = Gst.parse_launch ("playbin uri=file://" + Build.PKGDATADIR + "/sounds/waves-and-birdsong.ogg");
             pipeline_sea.set("volume", 5.0);
         	} catch (Error e) {
         		stderr.printf ("Error: %s\n", e.message);
@@ -271,7 +276,7 @@ namespace Tranquil {
             }
           });
 
-          img_help.clicked.connect (() => {
+          button_help.clicked.connect (() => {
             if(reveal.child_revealed) {
               reveal.set_reveal_child(false);
               reveal_1.set_reveal_child(false);
