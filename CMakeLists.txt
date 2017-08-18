@@ -109,9 +109,15 @@ install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/64/tranquil.svg DESTINATIO
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/128/tranquil.svg DESTINATION share/icons/hicolor/128x128/apps)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/tranquil.svg DESTINATION share/icons/hicolor/512x512/apps)
 #install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/info.svg DESTINATION ${PKGDATADIR}/icons)
+<<<<<<< HEAD
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/sounds/amb-forest-spring-afternoon-02.ogg DESTINATION ${PKGDATADIR}/sounds)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/sounds/countryside-summer-evening.ogg DESTINATION ${PKGDATADIR}/sounds)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/sounds/waves-and-birdsong.ogg DESTINATION ${PKGDATADIR}/sounds)
+=======
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/sounds/amb-forest-spring-afternoon-02.wav DESTINATION ${PKGDATADIR}/sounds)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/sounds/countryside-summer-evening.wav DESTINATION ${PKGDATADIR}/sounds)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/sounds/waves-and-birdsong.wav DESTINATION ${PKGDATADIR}/sounds)
+>>>>>>> 51a183799e0b88c9e74e9c7cfd8af25a9ad18659
 
 option (ICON_UPDATE "Run gtk-update-icon-cache after the install." ON)
 if (ICON_UPDATE)

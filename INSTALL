@@ -17,4 +17,8 @@ sudo make install
 
 -- Run --
 
+<<<<<<< HEAD
 ./tranquil
+=======
+./tranquil
+>>>>>>> 51a183799e0b88c9e74e9c7cfd8af25a9ad18659
