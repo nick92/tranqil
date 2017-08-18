@@ -12,6 +12,7 @@
   <screenshots>
     <screenshot type="default">
       <image>http://i.imgur.com/IdbUHjw.png</image>
+      <image>http://i.imgur.com/6NPYy90.png</image>
     </screenshot>
   </screenshots>
   <description>
@@ -20,6 +21,10 @@
     </p>
     <ul>
       <li>3 sounds to choose from</li>
+      Relieve stress or help concentration with soothing sounds of nature  
+    </p>
+    <ul>
+      <li>3 Soothing nature sounds to choose from</li>
       <li>Helps with relaxing or drowning out destracting background noises</li>
       <li>Easy to use, click and play</li>
     </ul>
@@ -29,6 +34,7 @@
   </description>
 <custom>
      <value key="x-appcenter-color-primary">#C44786</value>
+     <value key="x-appcenter-color-primary">#B26483</value>
      <value key="x-appcenter-color-primary-text">rgb(255, 255, 255)</value>
      <value key="x-appcenter-suggested-price">1</value>
   </custom>
