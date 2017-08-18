@@ -1,21 +1,14 @@
 Source: com.github.nick92.tranqil
-<<<<<<< HEAD
 Section: misc
-=======
 Section: x11
->>>>>>> 51a183799e0b88c9e74e9c7cfd8af25a9ad18659
 Priority: optional
 Maintainer: Nick Wilkins <nickawilkins@hotmail.com>
 Build-Depends: cmake(>= 2.8),
 	libgtk-3-0 (>=3.16),
-        libgranite-dev (>=0.3.0),
-<<<<<<< HEAD
-	libgstreamer1.0-dev,
-=======
+    libgranite-dev (>=0.3.0),
 	libgstreamer1.0-dev (>=1.8.3),
->>>>>>> 51a183799e0b88c9e74e9c7cfd8af25a9ad18659
 	debhelper (>= 8.0.0),
-        libglib2.0-0 (>=2.39),
+    libglib2.0-0 (>=2.39),
 	valac-0.26 | valac (>= 0.26)
 Standards-Version: 3.9.6
 
