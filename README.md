@@ -16,21 +16,14 @@ Click on the images to play the sound, scroll on them to adjust the volume
 	libnotify-dev
 	libgstreamer1.0-dev
 
-<<<<<<< HEAD
 #### Build & Run
-=======
-#### Build 
->>>>>>> 51a183799e0b88c9e74e9c7cfd8af25a9ad18659
 
 	mkdir build
 	cd build
 	cmake .. -DCMAKE_INSTALL_PREFIX=/usr
 	make
 	sudo make install
-<<<<<<< HEAD
     ./com.github.nick92.tranqil
-=======
->>>>>>> 51a183799e0b88c9e74e9c7cfd8af25a9ad18659
 
 ## Credits
 
