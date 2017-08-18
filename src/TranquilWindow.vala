@@ -166,17 +166,13 @@ namespace Tranquil {
             button_help = new Gtk.Button ();
             //img_about = new Gtk.Button ();
 
-<<<<<<< HEAD
             button_help.image = new Gtk.Image.from_icon_name ("help-contents-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
             button_help.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
             button_help.valign = Gtk.Align.START;
-=======
+
             button_help.image = new Gtk.Image.from_icon_name ("help-contents-symbolic", Gtk.IconSize.DND);
             button_help.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
             button_help.valign = Gtk.Align.START;
-            //img_about.image = new Gtk.Image.from_file (Build.PKGDATADIR + "/icons/info.svg");
-            //img_about.tooltip_text = "Display About";
->>>>>>> 51a183799e0b88c9e74e9c7cfd8af25a9ad18659
             button_help.tooltip_text = "Display Help";
 
             var header = new Gtk.HeaderBar ();
@@ -220,12 +216,8 @@ namespace Tranquil {
             grid.attach (toggle_button_3, 2, 0, 1, 3);
             grid.attach (reveal_2, 2, 3, 1, 1);
             grid.attach (button_help, 3, 0, 1, 1);
-<<<<<<< HEAD
-            
-            set_titlebar (header);
-=======
 
->>>>>>> 51a183799e0b88c9e74e9c7cfd8af25a9ad18659
+            set_titlebar (header);
             this.add (grid);
         }
 
