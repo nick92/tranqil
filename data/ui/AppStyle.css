@@ -1,0 +1,33 @@
+@define-color bg_color #7b4397;
+
+.titlebar,
+.background {
+    background-color: @bg_color;
+    color: #fff;
+    transition: all 800ms ease-in-out;
+}
+
+.button {
+  padding-bottom: 15px;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.activated {
+  border-bottom: 2px solid #fff;
+}
+
+h2 {
+  font-size: 2px;
+  font-weight: normal;
+}
+
+GtkDialog .window-frame {
+    border-radius: 4px;
+    box-shadow:
+        0 0 0 1px alpha (shade (@colorPrimary, 0.6), 0.55),
+        0 8px 10px 1px alpha (#000, 0.14),
+        0 3px 14px 2px alpha (#000, 0.12),
+        0 5px 5px -3px alpha (#000, 0.4),
+        0 14px 28px transparent;
+}
