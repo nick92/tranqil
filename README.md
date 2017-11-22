@@ -1,12 +1,23 @@
 ## Tranqil
 
-Relax to the soothing sounds of nature 
+Relax with Tranqil, 4 different soothing sounds to ease your mood or help you consontrate on your work 
 
 ![Tranqil](http://i.imgur.com/IdbUHjw.png)
 
-Click on the images to play the sound, scroll on them to adjust the volume
+Simple to use, click on the images to play the sound, scroll on them to adjust the volume
 
 ### Install 
+
+You can install our soothing app from our PPA with the following
+
+sudo add-apt-repository ppa:enso-os/tranquil
+sudo apt update
+sudo apt install com.github.nick92.tranquil
+
+### From Code
+
+Or if you are a developer and want to build and install locally you can do with the following
+
 #### Dependencies  
 
  	valac 
