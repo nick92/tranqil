@@ -1,3 +1,9 @@
+com.github.nick92.tranqil (1.1.0) xenial; urgency=medium
+
+  * initial release of tranqil 1.1
+
+ -- Nick Wilkins <nickawilkins@hotmail.com>  Sun, 19 Nov 2017 10:38:54 +0100
+
 com.github.nick92.tranqil (1.0.7) xenial; urgency=medium
 
   * replace sounds with ogg and fit question mark icon to header bar

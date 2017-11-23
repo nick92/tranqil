@@ -1,6 +1,6 @@
 /***
 
-    Copyright (C) 2017 Tranquil Developers
+    Copyright (C) 2017 Tranqil Developers
 
     This program is free software: you can redistribute it and/or modify it
     under the terms of the GNU Lesser General Public License version 3, as
@@ -18,18 +18,20 @@
 
 using Gst;
 
-namespace Tranquil {
+namespace Tranqil {
 
   public class TranBus {
 
     private Element pipeline_forest;
     private Element pipeline_night;
     private Element pipeline_sea;
+    private Element pipeline_rain;
 
-    public TranBus (Element pipeline_forest, Element pipeline_night, Element pipeline_sea) {
+    public TranBus (Element pipeline_forest, Element pipeline_night, Element pipeline_sea, Element pipeline_rain) {
         this.pipeline_forest = pipeline_forest;
         this.pipeline_night = pipeline_night;
         this.pipeline_sea = pipeline_sea;
+        this.pipeline_rain = pipeline_rain;
     }
 
     public void parse_message (Message message){
@@ -61,6 +63,11 @@ namespace Tranquil {
           if(message.src == this.pipeline_sea){
             this.pipeline_sea.seek_simple (Gst.Format.TIME,  Gst.SeekFlags.FLUSH | Gst.SeekFlags.KEY_UNIT, 0);
             this.pipeline_sea.set_state (Gst.State.PLAYING);
+          }
+
+          if(message.src == this.pipeline_rain){
+            this.pipeline_rain.seek_simple (Gst.Format.TIME,  Gst.SeekFlags.FLUSH | Gst.SeekFlags.KEY_UNIT, 0);
+            this.pipeline_rain.set_state (Gst.State.PLAYING);
           }
           break;
 
