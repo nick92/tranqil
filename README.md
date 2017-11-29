@@ -42,7 +42,9 @@ Or if you are a developer and want to build and install locally you can do with 
 
 ### Sounds
 
-The sounds in version 1.1 have changed due to copyright, we have been given permission to use the great sounds produced by Grant at [NatureSoundsOfNZ](http://naturesounds.co.nz/) you can follow his great on his site or via [SoundCloud](https://soundcloud.com/naturesounds_nz) 
+The sounds in version 1.1 have changed due to copyright, we have been given permission to use the great sounds produced by Grant at [NatureSoundsOfNZ](http://naturesounds.co.nz/) 
+
+You can access his great work through the site above or via [SoundCloud](https://soundcloud.com/naturesounds_nz) 
 
 [Rain](https://freesound.org/people/esh9419/sounds/188101) by [esh9419](https://freesound.org/people/esh9419/) Creative Commons BY 3.0
 
