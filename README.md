@@ -12,9 +12,9 @@ Simple to use, click on the images to play the sound, scroll on them to adjust t
 
 You can install our soothing app from our PPA with the following
 
-sudo add-apt-repository ppa:enso-os/tranquil
-sudo apt update
-sudo apt install com.github.nick92.tranquil
+	sudo add-apt-repository ppa:enso-os/tranquil
+	sudo apt update
+	sudo apt install com.github.nick92.tranquil
 
 ### From Code
 
