@@ -89,8 +89,6 @@ namespace Tranqil {
             this.get_style_context ().add_class ("rounded");
             this.set_size_request(MIN_WIDTH, MIN_HEIGHT);
 
-            get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-
             // Set up geometry
             Gdk.Geometry geo = new Gdk.Geometry();
             geo.min_width = MIN_WIDTH;
@@ -101,6 +99,8 @@ namespace Tranqil {
             this.set_geometry_hints(null, geo, Gdk.WindowHints.MIN_SIZE | Gdk.WindowHints.MAX_SIZE);
 
             restore_window_position ();
+
+            var first = tranqil_settings.get_boolean ("first-time");
 
             grid = new Gtk.Grid ();
             reveal = new Gtk.Revealer ();
@@ -121,12 +121,11 @@ namespace Tranqil {
             this.set_title ("tranqil");
 
             var provider = new Gtk.CssProvider ();
-            provider.load_from_resource ("/com/github/nick92/tranqil/ui/AppStyle.css");
+            provider.load_from_resource ("com/github/nick92/tranqil/ui/AppStyle.css");
             Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
             
             var relax_label = new Gtk.Label ("Choose sounds..");
             relax_label.get_style_context ().add_class ("h2");
-            relax_label.margin_bottom = 15;
 
             toggle_forest = new Gtk.ToggleButton ();
             toggle_night = new Gtk.ToggleButton ();
@@ -173,9 +172,8 @@ namespace Tranqil {
             button_help.tooltip_text = "Display Help";
 
             var header = new Gtk.HeaderBar ();
-            header.title = "tranqil";
-            //header.show_close_button = true;
-            //header.get_style_context ().add_class ("default-decoration");
+            header.show_close_button = true;
+            header.get_style_context ().add_class ("default-decoration");
             //header.pack_end (button_help);
 
             volume1 = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 8, 1);
@@ -211,10 +209,10 @@ namespace Tranqil {
             grid.halign = Gtk.Align.CENTER;
             grid.valign = Gtk.Align.CENTER;
             grid.column_spacing = 50;
-            grid.margin_bottom = 10;
+            grid.margin_bottom = 30;
             grid.margin_end = 20;
             grid.margin_start = 20;
-            //grid.margin = 20;
+            grid.margin = 20;
             relax_label.halign = Gtk.Align.CENTER;
             grid.attach (relax_label, 1, 0, 4, 1);
             grid.attach (toggle_forest, 1, 1, 1, 1);
@@ -248,13 +246,13 @@ namespace Tranqil {
           // Build the pipeline:
         	try {
         		pipeline_forest = Gst.parse_launch ("playbin uri=file:///usr/share/enso/tranqil/sounds/new/Waipoua-Forest-Wind.ogg");
-                pipeline_forest.set("volume", 5.0);
-                pipeline_night = Gst.parse_launch ("playbin uri=file:///usr/share/enso/tranqil/sounds/new/Whiritoa-Evening.ogg");
-                pipeline_night.set("volume", 5.0);
-                pipeline_waves = Gst.parse_launch ("playbin uri=file:///usr/share/enso/tranqil/sounds/new/Mahurangi-Waves.ogg");
-                pipeline_waves.set("volume", 5.0);
-                pipeline_rain = Gst.parse_launch ("playbin uri=file:///usr/share/enso/tranqil/sounds/new/rain.ogg");
-                pipeline_rain.set("volume", 5.0);
+            pipeline_forest.set("volume", 5.0);
+            pipeline_night = Gst.parse_launch ("playbin uri=file:///usr/share/enso/tranqil/sounds/new/Whiritoa-Evening.ogg");
+            pipeline_night.set("volume", 5.0);
+            pipeline_waves = Gst.parse_launch ("playbin uri=file:///usr/share/enso/tranqil/sounds/new/Mahurangi-Waves.ogg");
+            pipeline_waves.set("volume", 5.0);
+            pipeline_rain = Gst.parse_launch ("playbin uri=file:///usr/share/enso/tranqil/sounds/new/rain.ogg");
+            pipeline_rain.set("volume", 5.0);
         	} catch (Error e) {
         		stderr.printf ("Error: %s\n", e.message);
         	}
@@ -391,7 +389,14 @@ namespace Tranqil {
         }
 
         private string change_background_colour (){
-
+          /*if(toggle_forest.active && toggle_night.active && toggle_waves.active && toggle_rain.active)
+            return "#1F665D";*/
+          /*if(toggle_forest.active && toggle_night.active && toggle_waves.active)
+            return "#126972";
+          if(toggle_forest.active && toggle_night.active && toggle_rain.active)
+            return "#126972";
+          if(toggle_forest.active && toggle_night.active)
+            return "#32662C";*/
           if(toggle_forest.active && toggle_rain.active && toggle_waves.active)
             return "#33AA99";
           if(toggle_forest.active && toggle_waves.active)
@@ -400,12 +405,12 @@ namespace Tranqil {
             return "#10819B";
           if(toggle_forest.active)
             return "#569151";
+          if(toggle_night.active)
+            return "#B25212";
           if(toggle_rain.active)
             return "#295268";
           if(toggle_waves.active)
             return  "#1FA5C9";
-          if(toggle_night.active)
-            return "#ed2525";
 
           return "#7b4397";
 

@@ -11,18 +11,6 @@ install_data('com.github.nick92.tranqil.gschema.xml',
 install_data('com.github.nick92.tranqil.appdata.xml',
     install_dir : join_paths('share', 'metainfo'))
 
-install_data('./sounds/Mahurangi-Waves.ogg',
-    install_dir : join_paths('share', 'enso', 'tranqil', 'sounds', 'new'))
-
-install_data('./sounds/Waipoua-Forest-Wind.ogg',
-    install_dir : join_paths('share', 'enso', 'tranqil', 'sounds', 'new'))
-
-install_data('./sounds/Whiritoa-Evening.ogg',
-    install_dir : join_paths('share', 'enso', 'tranqil', 'sounds', 'new'))
-
-install_data('./sounds/rain.ogg',
-    install_dir : join_paths('share', 'enso', 'tranqil', 'sounds', 'new'))
-
 meson.add_install_script('install_schema.py')
 
 subdir('icons')

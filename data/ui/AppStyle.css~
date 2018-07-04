@@ -17,6 +17,11 @@
   border-bottom: 2px solid #fff;
 }
 
+h2 {
+  font-size: 2px;
+  font-weight: normal;
+}
+
 GtkDialog .window-frame {
     border-radius: 4px;
     box-shadow:

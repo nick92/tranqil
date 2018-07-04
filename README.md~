@@ -4,7 +4,7 @@ Relax your mood with or concentrate on your work with 4 different soothing sound
 
 Simple to use, click on the images to play the sound, scroll on them to adjust the volume
 
-![Tranqil](data/Screenshot.png)
+![Tranqil](https://i.imgur.com/acxyN4P.png)
 
 ## Install 
 
@@ -22,17 +22,21 @@ Or if you are a developer and want to build and install locally you can do with 
 
 #### Dependencies  
 
- 	meson 
+ 	valac 
 	cmake 
 	libgtk-3-dev 
+	libgranite-dev
+	libnotify-dev
 	libgstreamer1.0-dev
 
 #### Build & Run
 
-	mkdir build && meson build --prefix=/usr
+	mkdir build
 	cd build
-	sudo ninja install
-    ./src/com.github.nick92.tranqil
+	cmake .. -DCMAKE_INSTALL_PREFIX=/usr
+	make
+	sudo make install
+    ./com.github.nick92.tranqil
 
 ## Credits
 
