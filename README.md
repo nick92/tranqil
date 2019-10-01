@@ -14,7 +14,7 @@ You can install our soothing app from our PPA with the following
 
 	sudo add-apt-repository ppa:enso-os/tranquil
 	sudo apt update
-	sudo apt install com.github.nick92.tranquil
+	sudo apt install com.github.nick92.tranqil
 
 ### From Code
 
