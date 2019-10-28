@@ -43,9 +43,8 @@ public class Tranqil : Gtk.Application {
         provider.load_from_resource ("com/github/nick92/tranqil/ui/AppStyle.css");
         Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
-        //window.set_application (this);
         window.delete_event.connect(window.main_quit);
-        window.show ();
+        window.show_all ();
 
         //bus = new TranBus (window.pipeline_forest);
     }
