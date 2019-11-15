@@ -171,7 +171,7 @@ namespace Tranqil {
             header.title = "tranqil";
             //header.show_close_button = true;
             //header.get_style_context ().add_class ("default-decoration");
-            //header.pack_end (button_help);…
+            //header.pack_end (button_help);
 
             volume1 = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 8, 1);
             volume1.set_draw_value (false);
