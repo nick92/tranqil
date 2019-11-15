@@ -24,7 +24,7 @@ namespace Tranqil {
     const int MIN_WIDTH = 100;
     const int MIN_HEIGHT = 100;
 
-    public class TranqilWindow : Gtk.Dialog {
+    public class Window : Gtk.Dialog {
 
         private GLib.Settings tranqil_settings;
 
@@ -35,7 +35,7 @@ namespace Tranqil {
         private Gtk.Revealer                reveal;
         private Gtk.Revealer                reveal_1;
         private Gtk.Revealer                reveal_2;
-        private TranBus                     tranBus;
+        private Bus                         bus;
 
         private Gtk.SeparatorMenuItem   separator;
         private Gtk.MenuItem            item_clear_history;
@@ -80,7 +80,7 @@ namespace Tranqil {
              }
         """;
 
-        public TranqilWindow (Gtk.Application application) {
+        public Window (Gtk.Application application) {
 
             set_application(application);
 
@@ -109,7 +109,7 @@ namespace Tranqil {
 
             setup_ui ();    // Set up the GUI
             player_init ();
-            tranBus = new TranBus (pipeline_forest, pipeline_night, pipeline_waves, pipeline_rain);
+            bus = new Bus (pipeline_forest, pipeline_night, pipeline_waves, pipeline_rain);
             connect_signals ();
 
         }
@@ -121,10 +121,10 @@ namespace Tranqil {
             this.set_title ("tranqil");
 
             var provider = new Gtk.CssProvider ();
-            provider.load_from_resource ("/com/github/nick92/tranqil/ui/AppStyle.css");
+            provider.load_from_resource ("/com/github/nick92/tranqil/application.css");
             Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
             
-            var relax_label = new Gtk.Label ("Choose sounds..");
+            var relax_label = new Gtk.Label (_("Choose sounds…"));
             relax_label.get_style_context ().add_class ("h2");
             relax_label.margin_bottom = 15;
 
@@ -170,13 +170,13 @@ namespace Tranqil {
             button_help.image = new Gtk.Image.from_icon_name ("help-contents-symbolic", Gtk.IconSize.DND);
             button_help.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
             button_help.valign = Gtk.Align.START;
-            button_help.tooltip_text = "Display Help";
+            button_help.tooltip_text = _("Display Help");
 
             var header = new Gtk.HeaderBar ();
             header.title = "tranqil";
             //header.show_close_button = true;
             //header.get_style_context ().add_class ("default-decoration");
-            //header.pack_end (button_help);
+            //header.pack_end (button_help);…
 
             volume1 = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 8, 1);
             volume1.set_draw_value (false);
@@ -264,19 +264,19 @@ namespace Tranqil {
 
           forest_bus = pipeline_forest.get_bus ();
           forest_bus.add_signal_watch ();
-          forest_bus.message.connect (tranBus.parse_message);
+          forest_bus.message.connect (bus.parse_message);
 
           night_bus = pipeline_night.get_bus ();
           night_bus.add_signal_watch ();
-          night_bus.message.connect (tranBus.parse_message);
+          night_bus.message.connect (bus.parse_message);
 
           sea_bus = pipeline_waves.get_bus ();
           sea_bus.add_signal_watch ();
-          sea_bus.message.connect (tranBus.parse_message);
+          sea_bus.message.connect (bus.parse_message);
 
           rain_bus = pipeline_rain.get_bus ();
           rain_bus.add_signal_watch ();
-          rain_bus.message.connect (tranBus.parse_message);
+          rain_bus.message.connect (bus.parse_message);
 
           volume1.value_changed.connect (() => {
             pipeline_forest.set("volume", volume1.get_value ());
