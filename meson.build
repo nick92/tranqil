@@ -37,6 +37,6 @@ executable(
 )
 
 subdir('data')
-#subdir('po')
+subdir('po')
 
 meson.add_install_script('meson/post_install.py')
