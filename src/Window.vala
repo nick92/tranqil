@@ -83,13 +83,7 @@ namespace Tranqil {
         public Window (Gtk.Application application) {
 
             set_application(application);
-
             tranqil_settings = new GLib.Settings ("com.github.nick92.tranqil");
-
-            this.get_style_context ().add_class ("rounded");
-            this.set_size_request(MIN_WIDTH, MIN_HEIGHT);
-
-            get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
 
             // Set up geometry
             Gdk.Geometry geo = new Gdk.Geometry();
@@ -119,6 +113,7 @@ namespace Tranqil {
          */
         private void setup_ui () {
             this.set_title ("tranqil");
+            
 
             var provider = new Gtk.CssProvider ();
             provider.load_from_resource ("/com/github/nick92/tranqil/application.css");
@@ -155,10 +150,10 @@ namespace Tranqil {
             toggle_forest.valign = Gtk.Align.START;
             toggle_waves.valign = Gtk.Align.START;*/
 
-            toggle_forest.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-            toggle_night.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-            toggle_waves.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-            toggle_rain.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+            toggle_forest.get_style_context ().add_class ("button");
+            toggle_night.get_style_context ().add_class ("button");
+            toggle_waves.get_style_context ().add_class ("button");
+            toggle_rain.get_style_context ().add_class ("button");
 
             button_help = new Gtk.Button ();
             //img_about = new Gtk.Button ();
@@ -239,22 +234,19 @@ namespace Tranqil {
 
             var action_box = get_action_area () as Gtk.Box;
             action_box.visible = false;
-
-            //set_titlebar (header);
-            //this.add (grid);
         }
 
         public void player_init () {
           // Build the pipeline:
         	try {
         		pipeline_forest = Gst.parse_launch ("playbin uri=file:///usr/share/enso/tranqil/sounds/new/Waipoua-Forest-Wind.ogg");
-                pipeline_forest.set("volume", 5.0);
-                pipeline_night = Gst.parse_launch ("playbin uri=file:///usr/share/enso/tranqil/sounds/new/Whiritoa-Evening.ogg");
-                pipeline_night.set("volume", 5.0);
-                pipeline_waves = Gst.parse_launch ("playbin uri=file:///usr/share/enso/tranqil/sounds/new/Mahurangi-Waves.ogg");
-                pipeline_waves.set("volume", 5.0);
-                pipeline_rain = Gst.parse_launch ("playbin uri=file:///usr/share/enso/tranqil/sounds/new/rain.ogg");
-                pipeline_rain.set("volume", 5.0);
+            pipeline_forest.set("volume", 5.0);
+            pipeline_night = Gst.parse_launch ("playbin uri=file:///usr/share/enso/tranqil/sounds/new/Whiritoa-Evening.ogg");
+            pipeline_night.set("volume", 5.0);
+            pipeline_waves = Gst.parse_launch ("playbin uri=file:///usr/share/enso/tranqil/sounds/new/Mahurangi-Waves.ogg");
+            pipeline_waves.set("volume", 5.0);
+            pipeline_rain = Gst.parse_launch ("playbin uri=file:///usr/share/enso/tranqil/sounds/new/rain.ogg");
+            pipeline_rain.set("volume", 5.0);
         	} catch (Error e) {
         		stderr.printf ("Error: %s\n", e.message);
         	}
@@ -391,7 +383,6 @@ namespace Tranqil {
         }
 
         private string change_background_colour (){
-
           if(toggle_forest.active && toggle_rain.active && toggle_waves.active)
             return "#33AA99";
           if(toggle_forest.active && toggle_waves.active)
@@ -408,11 +399,6 @@ namespace Tranqil {
             return "#ed2525";
 
           return "#7b4397";
-
-            //rain color_primary = "#295268";
-            //waves color_primary = "#1FA5C9";
-            //night color_primary = "#83A095";
-            //forest color_primary = "#569151";
         }
 
         private bool on_scroll_event (Gdk.EventScroll e) {

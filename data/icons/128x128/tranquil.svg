@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-31 217 128 128" style="enable-background:new -31 217 128 128;" xml:space="preserve">
+<style type="text/css">
+	.Chrome_x0020_Highlight{fill:url(#SVGID_1_);stroke:#FFFFFF;stroke-width:0.3629;stroke-miterlimit:1;}
+	.st0{fill:url(#XMLID_10_);}
+	.st1{opacity:0.51;}
+	.st2{fill:url(#XMLID_11_);}
+	.st3{opacity:0.7;}
+	.st4{fill:url(#XMLID_13_);}
+	.st5{opacity:0.49;}
+	.st6{fill:#FFFFFF;}
+	.st7{fill:none;stroke:#717171;stroke-width:0.5878;stroke-miterlimit:1;}
+	.st8{opacity:0.58;}
+	.st9{fill:#994F77;stroke:#000000;stroke-width:0.75;stroke-miterlimit:10;}
+	.st10{opacity:0.35;}
+	.st11{fill:#FF7998;}
+	.st12{fill:#DD2F5D;}
+	.st13{fill:#674447;}
+	.st14{fill:#674447;stroke:#000000;stroke-width:0.25;stroke-miterlimit:10;}
+	.st15{fill:#4F3639;}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-223" y1="537" x2="-223" y2="536">
+	<stop  offset="0" style="stop-color:#656565"/>
+	<stop  offset="0.618" style="stop-color:#1B1B1B"/>
+	<stop  offset="0.6292" style="stop-color:#545454"/>
+	<stop  offset="0.9831" style="stop-color:#3E3E3E"/>
+</linearGradient>
+<g id="XMLID_22_">
+	<g id="XMLID_12_">
+		<g id="XMLID_20_">
+			<g>
+				
+					<linearGradient id="XMLID_10_" gradientUnits="userSpaceOnUse" x1="33" y1="340.8447" x2="33" y2="214.8447" gradientTransform="matrix(1 0 0 1 0 3.1553)">
+					<stop  offset="0" style="stop-color:#656565"/>
+					<stop  offset="0.618" style="stop-color:#1B1B1B"/>
+					<stop  offset="0.6292" style="stop-color:#545454"/>
+					<stop  offset="0.9831" style="stop-color:#3E3E3E"/>
+				</linearGradient>
+				<circle id="XMLID_32_" class="st0" cx="33" cy="281" r="63"/>
+			</g>
+			<g class="st1">
+				
+					<linearGradient id="XMLID_11_" gradientUnits="userSpaceOnUse" x1="33" y1="340.8447" x2="33" y2="214.8447" gradientTransform="matrix(1 0 0 1 0 3.1553)">
+					<stop  offset="0" style="stop-color:#0E0E0E"/>
+					<stop  offset="0.5" style="stop-color:#000000"/>
+					<stop  offset="0.5213" style="stop-color:#010101"/>
+					<stop  offset="0.7262" style="stop-color:#0B0B0B"/>
+					<stop  offset="1" style="stop-color:#0E0E0E"/>
+				</linearGradient>
+				<circle id="XMLID_31_" class="st2" cx="33" cy="281" r="63"/>
+			</g>
+			<g class="st3">
+				
+					<linearGradient id="XMLID_13_" gradientUnits="userSpaceOnUse" x1="33" y1="214.8447" x2="33" y2="340.8447" gradientTransform="matrix(1 0 0 1 0 3.1553)">
+					<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0.77"/>
+					<stop  offset="0.2033" style="stop-color:#FFFFFF;stop-opacity:0.65"/>
+					<stop  offset="0.3448" style="stop-color:#FFFFFF;stop-opacity:0.65"/>
+					<stop  offset="0.3462" style="stop-color:#FFFFFF;stop-opacity:0.65"/>
+					<stop  offset="0.511" style="stop-color:#FFFFFF;stop-opacity:0"/>
+					<stop  offset="0.5247" style="stop-color:#E1E1E1;stop-opacity:4.472275e-003"/>
+					<stop  offset="0.5464" style="stop-color:#B8B8B8;stop-opacity:1.158136e-002"/>
+					<stop  offset="0.5708" style="stop-color:#929292;stop-opacity:1.957367e-002"/>
+					<stop  offset="0.5974" style="stop-color:#727272;stop-opacity:2.826838e-002"/>
+					<stop  offset="0.6268" style="stop-color:#565656;stop-opacity:3.787606e-002"/>
+					<stop  offset="0.6599" style="stop-color:#404040;stop-opacity:4.872554e-002"/>
+					<stop  offset="0.6986" style="stop-color:#2F2F2F;stop-opacity:6.138782e-002"/>
+					<stop  offset="0.7465" style="stop-color:#242424;stop-opacity:7.705475e-002"/>
+					<stop  offset="0.8136" style="stop-color:#1D1D1D;stop-opacity:9.902187e-002"/>
+					<stop  offset="1" style="stop-color:#1B1B1B;stop-opacity:0.16"/>
+				</linearGradient>
+				<circle id="XMLID_30_" class="st4" cx="33" cy="281" r="63"/>
+			</g>
+			<g class="st5">
+				<g>
+					<path class="st6" d="M33,343.3c-25.2-0.3-48.3-15.5-58-38.9c-10.4-25.4-2.3-55.1,19-72.1c19.9-15.9,48.3-18,70.3-5.2
+						c23.5,13.7,35.9,41.8,29.5,68.4C87,323.4,61.5,343,33,343.3c0,0,0,0.7,0,0.7c28.3-0.3,53.6-19.5,60.7-47.1
+						c5.7-22.3-1.3-46.7-18.3-62.4c-20.8-19.2-52.9-21.9-76.6-6.4c-19.3,12.6-30,35.1-28.3,58.1C-27,318.6,0.7,343.7,33,344
+						C33,344,33,343.3,33,343.3z"/>
+				</g>
+			</g>
+			<g>
+				<circle id="XMLID_29_" class="st7" cx="33" cy="281" r="63"/>
+			</g>
+			<g class="st8">
+				<g>
+					<path d="M33,218.1c25.3,0.3,48.6,15.5,58.3,39.1c10.5,25.7,2.5,55.9-19.1,73.1c-20,16-48.6,18-70.8,5.2
+						c-23.9-13.9-36.2-42.5-29.6-69.4C-21.4,238,4.3,218.4,33,218.1c0,0,0-0.1,0-0.1c-28.5,0.3-53.9,19.6-61,47.3
+						c-5.7,22.3,1.4,46.5,18.4,62.1c20.9,19.3,53.2,22,77.1,6.4c19.2-12.5,30.2-35,28.4-57.8c-2.5-32.6-30.3-57.8-62.8-58.1
+						C33,217.9,33,218.1,33,218.1z"/>
+				</g>
+			</g>
+			<g>
+				<circle id="XMLID_27_" class="st9" cx="33" cy="281" r="63"/>
+			</g>
+		</g>
+		<g id="XMLID_18_" class="st10">
+			<circle id="XMLID_6_" class="st11" cx="21.9" cy="284.9" r="37.4"/>
+		</g>
+		<g id="XMLID_16_">
+			<path id="XMLID_5_" class="st12" d="M92.2,302.7H3.5l19.7,27.6c0,0,15.4,6.7,27.2,11.3C69.7,336,85.3,321.5,92.2,302.7z"/>
+		</g>
+		<g id="XMLID_14_">
+			<path id="XMLID_4_" class="st13" d="M33,344c16.8,0,32-6.6,43.3-17.3c-8.6-0.2-10.7-2.1-25.8-2.1c-6.4,0-23.3,5.7-29.6-6.3
+				c-4.9-9.5-13.8-17.1-21.1-19c-6.2-1.6-7.9-7.6-8.4-14.8c-0.6-7.6-6.7-7.8-10.6-12.7c-3.6-4.7-3.5-9.9-7.7-10.5
+				c-2,6.2-3.1,12.8-3.1,19.6C-30,315.8-1.8,344,33,344z"/>
+		</g>
+		<path id="XMLID_3_" class="st14" d="M52.8,250.4c-0.5-0.4-1.1-0.6-1.7-0.5l-27.3,4.3c-1.1,0.2-1.8,1.1-1.8,2.1v8.6v13.7h-4.3
+			c-4.7,0-8.6,3.5-8.6,7.9c0,4.4,3.9,7.9,8.6,7.9s8.6-3.5,8.6-7.9v-5.8v-14l23-3.6V275h-4.3c-4.7,0-8.6,3.5-8.6,7.9s3.9,7.9,8.6,7.9
+			s8.6-3.5,8.6-7.9v-5.8v-16.5V252C53.6,251.4,53.3,250.8,52.8,250.4z"/>
+	</g>
+	<g id="XMLID_9_">
+		<path id="XMLID_2_" class="st15" d="M27.2,241.8c0,0,1.3-0.3,2.4-0.1c1.1,0.2,2.3,1.3,3.5,1.4s1-0.4,1-0.4s-0.8,0.1-1-0.6
+			c-0.2-0.8,0.7-1.4,2-2.4c1.4-1.1,1.6-2.1,1.4-2.8c0,0-0.2,0.4-1.4,1.1c-1.1,0.6-1.9,1.9-2.8,2.7c-0.9,0.9-0.9,0.9-1.8,0.7
+			S28,240.9,27.2,241.8z"/>
+		<path id="XMLID_1_" class="st15" d="M70.5,257c0,0,1.3-0.3,2.4-0.1c1.1,0.2,2.3,1.3,3.5,1.4c1.3,0.1,1-0.4,1-0.4s-0.8,0.1-1-0.6
+			c-0.2-0.8,0.7-1.4,2-2.4c1.4-1.1,1.6-2.1,1.4-2.8c0,0-0.2,0.4-1.4,1.1c-1.1,0.6-1.9,1.9-2.8,2.7c-0.9,0.9-0.9,0.9-1.8,0.7
+			C73.1,256.3,71.3,256.1,70.5,257z"/>
+	</g>
+</g>
+</svg>

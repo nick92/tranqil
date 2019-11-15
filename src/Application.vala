@@ -43,9 +43,8 @@ public class Application : Gtk.Application {
         provider.load_from_resource ("com/github/nick92/tranqil/application.css");
         Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
-        //window.set_application (this);
         window.delete_event.connect(window.main_quit);
-        window.show ();
+        window.show_all ();
 
         //bus = new Bus (window.pipeline_forest);
     }

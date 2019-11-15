@@ -2,27 +2,33 @@
 
 .titlebar,
 .background {
-    background-color: @bg_color;
+    padding: 30px;
+    background-color: alpha(@bg_color, 0.9);
     color: #fff;
     transition: all 800ms ease-in-out;
 }
 
+.window {
+  padding: 30px;
+}
+
 .button {
-  padding-bottom: 15px;
+  padding: 10px;
   background-color: transparent;
   border-color: transparent;
+  border-radius: 50px;
 }
 
 .activated {
-  border-bottom: 2px solid #fff;
+  padding: 10px;
+  background-color: transparent;
+  border-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 50px;
 }
 
-GtkDialog .window-frame {
-    border-radius: 4px;
-    box-shadow:
-        0 0 0 1px alpha (shade (@colorPrimary, 0.6), 0.55),
-        0 8px 10px 1px alpha (#000, 0.14),
-        0 3px 14px 2px alpha (#000, 0.12),
-        0 5px 5px -3px alpha (#000, 0.4),
-        0 14px 28px transparent;
+.h2 {
+  padding-top: 15px;
+  font-size: 22px;
+  font-weight: 200;
 }
