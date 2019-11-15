@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/com/github/nick92/tranqil">
-    <file compressed="true">ui/AppStyle.css</file>
+    <file compressed="true">application.css</file>
     <file compressed="true">icons/night.svg</file>
     <file compressed="true">icons/forest.svg</file>
     <file compressed="true">icons/waves.svg</file>
