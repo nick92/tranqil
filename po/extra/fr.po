@@ -1,0 +1,61 @@
+# French translations for extra package.
+# Copyright (C) 2019 THE extra'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+# Nathan Bonnemains (@NathanBnm), 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-27 20:59+0100\n"
+"PO-Revision-Date: 2019-11-27 20:57+0100\n"
+"Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
+"Language-Team: none\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: data/com.github.nick92.tranqil.desktop.in:4
+#: data/com.github.nick92.tranqil.desktop.in:6
+#: data/com.github.nick92.tranqil.appdata.xml.in:6
+msgid "Tranqil"
+msgstr "Tranqil"
+
+#: data/com.github.nick92.tranqil.desktop.in:5
+#: data/com.github.nick92.tranqil.appdata.xml.in:7
+msgid "Relax to soothing sounds of nature"
+msgstr "Détendez-vous aux sons relaxants de la nature"
+
+#: data/com.github.nick92.tranqil.desktop.in:8
+msgid "com.github.nick92.tranqil"
+msgstr "com.github.nick92.tranqil"
+
+#: data/com.github.nick92.tranqil.appdata.xml.in:8
+msgid "Nick Wilkins"
+msgstr "Nick Wilkins"
+
+#: data/com.github.nick92.tranqil.appdata.xml.in:17
+msgid "Relieve stress or help concentration with Tranqil"
+msgstr "Tranquil vous aide à soulager votre stress et à vous concentrer"
+
+#: data/com.github.nick92.tranqil.appdata.xml.in:21
+msgid "3 sounds to choose from"
+msgstr "3 sons à sélectionner"
+
+#: data/com.github.nick92.tranqil.appdata.xml.in:22
+msgid "Helps with relaxing or drowning out destracting background noises"
+msgstr "Aide à se détendre ou à se calmer en éliminant les bruits de fond désagréables"
+
+#: data/com.github.nick92.tranqil.appdata.xml.in:23
+msgid "Easy to use, click and play"
+msgstr "Facile à utiliser, cliquez et écoutez"
+
+#: data/com.github.nick92.tranqil.appdata.xml.in:25
+msgid "Your life will be more relaxed with this simple app."
+msgstr "Votre vie sera plus détendue avec cette simple application."
+
+#: data/com.github.nick92.tranqil.appdata.xml.in:37
+msgid "Initial release"
+msgstr "Version initiale"
