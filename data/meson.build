@@ -1,28 +1,50 @@
-gnome = import ('gnome')
+icon_sizes = ['32', '48', '64', '128']
 
-tranqil_resources = gnome.compile_resources ('tranqil_resources', 'tranqil-resource.xml', source_dir: '.', c_name: 'tranqil')
+foreach i : icon_sizes
+    install_data(
+        join_paths('icons', i, meson.project_name() + '.svg'),
+        install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', i + 'x' + i, 'apps')
+    )
+    install_data(
+        join_paths('icons', i, meson.project_name() + '.svg'),
+        install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', i + 'x' + i + '@2', 'apps')
+    )
+endforeach
 
-install_data('com.github.nick92.tranqil.desktop',
-    install_dir : join_paths('share', 'applications'))
+i18n.merge_file(
+    input: meson.project_name() + '.desktop.in',
+    output: meson.project_name() + '.desktop',
+    po_dir: join_paths(meson.source_root(), 'po', 'extra'),
+    type: 'desktop',
+    install: true,
+    install_dir: join_paths(get_option('datadir'), 'applications')
+)
 
-install_data('com.github.nick92.tranqil.gschema.xml',
-    install_dir : join_paths('share', 'glib-2.0', 'schemas'))
+i18n.merge_file(
+    input: meson.project_name() + '.appdata.xml.in',
+    output: meson.project_name() + '.appdata.xml',
+    po_dir: join_paths(meson.source_root(), 'po', 'extra'),
+    install: true,
+    install_dir: join_paths(get_option('datadir'), 'metainfo')
+)
 
-install_data('com.github.nick92.tranqil.appdata.xml',
-    install_dir : join_paths('share', 'metainfo'))
+install_data(
+    meson.project_name() + '.gschema.xml',
+    install_dir: join_paths(get_option('datadir'), 'glib-2.0', 'schemas')
+)
 
-install_data('./sounds/Mahurangi-Waves.ogg',
+install_data(
+    join_paths('sounds', 'Mahurangi-Waves.ogg'),
     install_dir : join_paths('share', 'enso', 'tranqil', 'sounds', 'new'))
 
-install_data('./sounds/Waipoua-Forest-Wind.ogg',
+install_data(
+    join_paths('sounds', 'Waipoua-Forest-Wind.ogg'),
     install_dir : join_paths('share', 'enso', 'tranqil', 'sounds', 'new'))
 
-install_data('./sounds/Whiritoa-Evening.ogg',
+install_data(
+    join_paths('sounds', 'Whiritoa-Evening.ogg'),
     install_dir : join_paths('share', 'enso', 'tranqil', 'sounds', 'new'))
 
-install_data('./sounds/rain.ogg',
+install_data(
+    join_paths('sounds', 'rain.ogg'),
     install_dir : join_paths('share', 'enso', 'tranqil', 'sounds', 'new'))
-
-meson.add_install_script('install_schema.py')
-
-subdir('icons')

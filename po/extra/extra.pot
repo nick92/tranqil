@@ -1,0 +1,60 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-15 11:42+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/com.github.nick92.tranqil.desktop.in:4
+#: data/com.github.nick92.tranqil.desktop.in:6
+#: data/com.github.nick92.tranqil.appdata.xml.in:6
+msgid "Tranqil"
+msgstr ""
+
+#: data/com.github.nick92.tranqil.desktop.in:5
+msgid "Soothing sounds"
+msgstr ""
+
+#: data/com.github.nick92.tranqil.desktop.in:8
+msgid "com.github.nick92.tranqil"
+msgstr ""
+
+#: data/com.github.nick92.tranqil.appdata.xml.in:7
+msgid "Relax to soothing sounds of nature"
+msgstr ""
+
+#: data/com.github.nick92.tranqil.appdata.xml.in:8
+msgid "Nick Wilkins"
+msgstr ""
+
+#: data/com.github.nick92.tranqil.appdata.xml.in:17
+msgid "Relieve stress or help concentration with Tranqil"
+msgstr ""
+
+#: data/com.github.nick92.tranqil.appdata.xml.in:21
+msgid "3 sounds to choose from"
+msgstr ""
+
+#: data/com.github.nick92.tranqil.appdata.xml.in:22
+msgid "Helps with relaxing or drowning out destracting background noises"
+msgstr ""
+
+#: data/com.github.nick92.tranqil.appdata.xml.in:23
+msgid "Easy to use, click and play"
+msgstr ""
+
+#: data/com.github.nick92.tranqil.appdata.xml.in:25
+msgid "Your life will be more relaxed with this simple app."
+msgstr ""

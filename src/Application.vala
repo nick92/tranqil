@@ -20,14 +20,14 @@ using Gtk;
 
 namespace Tranqil {
 
-public class Tranqil : Gtk.Application {
+public class Application : Gtk.Application {
 
-    private static Tranqil app;
-    private TranqilWindow window = null;
-    private TranBus bus;
+    private static Application app;
+    private Window window = null;
+    private Bus bus;
 
-    public Tranqil () {
-        Object (application_id: "com.enso.tranquil",
+    public Application () {
+        Object (application_id: "com.github.nick92.tranqil",
         flags: ApplicationFlags.FLAGS_NONE);
     }
 
@@ -37,28 +37,28 @@ public class Tranqil : Gtk.Application {
             return;
         }
 
-        window = new TranqilWindow (this);
+        window = new Window (this);
 
         var provider = new Gtk.CssProvider ();
-        provider.load_from_resource ("com/github/nick92/tranqil/ui/AppStyle.css");
+        provider.load_from_resource ("com/github/nick92/tranqil/application.css");
         Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
         window.delete_event.connect(window.main_quit);
         window.show_all ();
 
-        //bus = new TranBus (window.pipeline_forest);
+        //bus = new Bus (window.pipeline_forest);
     }
 
-    public static Tranqil get_instance () {
+    public static Application get_instance () {
         if (app == null)
-            app = new Tranqil ();
+            app = new Application ();
 
         return app;
     }
 
     public static int main (string[] args) {
         Gst.init(ref args);
-        app = new Tranqil ();
+        app = new Application ();
 
         if (args[1] == "-s") {
             return 0;

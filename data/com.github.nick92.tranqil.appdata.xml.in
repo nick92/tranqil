@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!-- Copyright 2017 Nick Wilkins <nickawilkins@hotmail.com>-->
 <component type="desktop">
   <id>com.github.nick92.tranqil.desktop</id>
@@ -26,9 +26,16 @@
       Your life will be more relaxed with this simple app.
     </p>
   </description>
-<custom>
-     <value key="x-appcenter-color-primary">#C44786</value>
-     <value key="x-appcenter-color-primary-text">rgb(255, 255, 255)</value>
-     <value key="x-appcenter-suggested-price">1</value>
+  <custom>
+    <value key="x-appcenter-color-primary">#C44786</value>
+    <value key="x-appcenter-color-primary-text">rgb(255, 255, 255)</value>
+    <value key="x-appcenter-suggested-price">1</value>
   </custom>
+  <releases>
+    <release version="1.1.0" date="2017-11-19">
+      <description>
+        <p>Initial release</p>
+      </description>
+    </release>
+  </releases>
 </component>

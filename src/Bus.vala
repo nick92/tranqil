@@ -20,14 +20,14 @@ using Gst;
 
 namespace Tranqil {
 
-  public class TranBus {
+  public class Bus {
 
     private Element pipeline_forest;
     private Element pipeline_night;
     private Element pipeline_sea;
     private Element pipeline_rain;
 
-    public TranBus (Element pipeline_forest, Element pipeline_night, Element pipeline_sea, Element pipeline_rain) {
+    public Bus (Element pipeline_forest, Element pipeline_night, Element pipeline_sea, Element pipeline_rain) {
         this.pipeline_forest = pipeline_forest;
         this.pipeline_night = pipeline_night;
         this.pipeline_sea = pipeline_sea;
