@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.nick92.tranqil\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-15 11:42+0100\n"
+"POT-Creation-Date: 2019-11-27 20:59+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,10 +17,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/Window.vala:127
+#: src/Window.vala:122
 msgid "Choose sounds…"
 msgstr ""
 
-#: src/Window.vala:173
+#: src/Window.vala:168
 msgid "Display Help"
 msgstr ""

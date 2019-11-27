@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-15 11:42+0100\n"
+"POT-Creation-Date: 2019-11-27 20:59+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,15 +24,12 @@ msgid "Tranqil"
 msgstr ""
 
 #: data/com.github.nick92.tranqil.desktop.in:5
-msgid "Soothing sounds"
+#: data/com.github.nick92.tranqil.appdata.xml.in:7
+msgid "Relax to soothing sounds of nature"
 msgstr ""
 
 #: data/com.github.nick92.tranqil.desktop.in:8
 msgid "com.github.nick92.tranqil"
-msgstr ""
-
-#: data/com.github.nick92.tranqil.appdata.xml.in:7
-msgid "Relax to soothing sounds of nature"
 msgstr ""
 
 #: data/com.github.nick92.tranqil.appdata.xml.in:8
@@ -57,4 +54,8 @@ msgstr ""
 
 #: data/com.github.nick92.tranqil.appdata.xml.in:25
 msgid "Your life will be more relaxed with this simple app."
+msgstr ""
+
+#: data/com.github.nick92.tranqil.appdata.xml.in:37
+msgid "Initial release"
 msgstr ""
