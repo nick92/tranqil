@@ -25,6 +25,7 @@ Or if you are a developer and want to build and install locally you can do with 
  	meson 
 	libgtk-3-dev 
 	libgstreamer1.0-dev
+	valac
 
 #### Build & Run
 
