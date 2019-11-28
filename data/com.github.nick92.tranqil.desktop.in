@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=Tranqil
-Comment=Ralax to soothing sounds of nature
+Comment=Relax to soothing sounds of nature
 GenericName=Tranqil
 Exec=com.github.nick92.tranqil
 Icon=com.github.nick92.tranqil
