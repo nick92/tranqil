@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-27 20:59+0100\n"
+"POT-Creation-Date: 2019-11-29 10:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,7 +41,7 @@ msgid "Relieve stress or help concentration with Tranqil"
 msgstr ""
 
 #: data/com.github.nick92.tranqil.appdata.xml.in:21
-msgid "3 sounds to choose from"
+msgid "4 sounds to choose from"
 msgstr ""
 
 #: data/com.github.nick92.tranqil.appdata.xml.in:22

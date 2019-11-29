@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-27 20:59+0100\n"
+"POT-Creation-Date: 2019-11-29 10:31+0100\n"
 "PO-Revision-Date: 2019-11-27 20:57+0100\n"
 "Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
 "Language-Team: none\n"
@@ -41,12 +41,14 @@ msgid "Relieve stress or help concentration with Tranqil"
 msgstr "Tranquil vous aide à soulager votre stress et à vous concentrer"
 
 #: data/com.github.nick92.tranqil.appdata.xml.in:21
-msgid "3 sounds to choose from"
-msgstr "3 sons à sélectionner"
+msgid "4 sounds to choose from"
+msgstr "Choisissez parmi 4 sons"
 
 #: data/com.github.nick92.tranqil.appdata.xml.in:22
 msgid "Helps with relaxing or drowning out destracting background noises"
-msgstr "Aide à se détendre ou à se calmer en éliminant les bruits de fond désagréables"
+msgstr ""
+"Aide à se détendre ou à se calmer en éliminant les bruits de fond "
+"désagréables"
 
 #: data/com.github.nick92.tranqil.appdata.xml.in:23
 msgid "Easy to use, click and play"
