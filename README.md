@@ -1,6 +1,6 @@
 ## Tranqil
 
-Relax your mood with or concentrate on your work with 4 different soothing sounds to choose from
+Relax your mood or concentrate on your work with 4 different soothing sounds
 
 Simple to use, click on the images to play the sound, scroll on them to adjust the volume
 
